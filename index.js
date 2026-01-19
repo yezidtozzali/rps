@@ -59,6 +59,7 @@ newRound.addEventListener("click", function(){
     btnPaper.style.visibility = "visible";
     btnRock.style.visibility = "visible";
     btnScissors.style.visibility = "visible";
+    tie.textContent = ""
 })
 
 //Restart-------------------------------------------
