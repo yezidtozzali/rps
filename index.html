@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RPS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 class="result"></h1>
+    <div id="game">
+
+
+<div id="topDisplay">
+    <div id="score">
+        <p id="yourPoint">You:<p class="yourScore"></p></p>
+        
+        <p id="cpuPoint">CPU:<p class="cpuScore"></p></p>
+    </div>
+
+    <div id="round">
+        <p>Round: <p class="roundPoint"> </p>
+        </h3>
+
+    </div>
+
+    <div id="tieRound">
+        <p class="tie"></p>
+    </div>
+</div>
     
-    <script src="./idex.js"></script>
+    <div id="choiceDisplay">
+        
+        <img class="humanImage" src="" alt="">
+
+        <img class="cpuImage" src="" alt="">
+
+    </div>
+
+
+    <div>
+        <button class="nextRound">Next Round</button>
+    </div>
+
+    <div id="playerChoice">
+    <button class="btnRock"><img src="./rock.png" alt="rock"></button>
+    <button class="btnPaper"><img src="./paper.png" alt="paper"></button>
+    <button class="btnScissors"><img src="./scissors.png" alt="scissors"></button>
+    </div>
+
+    </div>
+
+    <div>
+        <button class="newGame">Restart</button>
+    </div>
+    <script src="./index.js"></script>
 </body>
 </html>

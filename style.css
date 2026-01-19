@@ -1,0 +1,86 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+button img{
+    width: 50px;
+}
+
+button{
+    border-radius: 8px;
+}
+
+.btnRock, .btnPaper, .btnScissors{
+    cursor: pointer;
+}
+
+.btnRock{
+    background-color: #f28482 ;
+}
+.btnPaper{
+    background-color: #84a59d;
+}
+.btnScissors{
+    background-color: #f5cac3;
+}
+#score {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 16px 8px 16px 16px;
+    margin: auto;
+    width: 170px;
+}
+
+#game{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f6bd60;
+    width: 208px;
+    border-radius: 8px;
+    height: 500px;
+    border: solid 2px rgb(0, 0, 0);
+}
+
+#round{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 900;
+
+}
+
+.tie{
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+}
+
+#choiceDisplay {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+img{  
+    width: 50px;
+    height: 50px;
+}
+
+.nextRound{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2px 8px;
+}
