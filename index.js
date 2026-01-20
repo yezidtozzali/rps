@@ -59,7 +59,10 @@ newRound.addEventListener("click", function(){
     btnPaper.style.visibility = "visible";
     btnRock.style.visibility = "visible";
     btnScissors.style.visibility = "visible";
-    tie.textContent = ""
+    tie.textContent = "";
+
+    humanImg.style.backgroundColor = "";
+    cpuImg.style.backgroundColor = "";
 })
 
 //Restart-------------------------------------------
@@ -85,6 +88,7 @@ restart.addEventListener("click", function(){
     
     humanImg.style.visibility = "hidden";
     cpuImg.style.visibility = "hidden";
+    tie.textContent = "";
 })
 
 
@@ -109,6 +113,10 @@ const playRound = function(humanChoice){
         round.textContent = roundNumber;
         tie.textContent = "Tie !"
         newRound.style.visibility = "visible";
+        humanImg.style.borderColor = "#9CA3AF";
+        humanImg.style.boxShadow = "0 4px 12px rgba(156, 163, 175, 0.3)";
+        cpuImg.style.borderColor = "#9CA3AF";
+        cpuImg.style.boxShadow = "0 4px 12px rgba(156, 163, 175, 0.3)";
         return;
         
     }
@@ -120,12 +128,22 @@ const playRound = function(humanChoice){
         yourScore.textContent = humanScore;
         roundNumber ++ ;
         round.textContent = roundNumber;
+        tie.textContent = "Player wins";
+        humanImg.style.backgroundColor = "#4ECDC4";
+        humanImg.style.boxShadow = "0 4px 12px rgba(78, 205, 196, 0.4)";
+        cpuImg.style.backgroundColor = "#FF6B6B";
+        cpuImg.style.boxShadow = "0 4px 12px rgba(255, 107, 107, 0.4)"; 
     }
     else{
         computerScore ++;
         cpuScore.textContent = computerScore;
         roundNumber ++ ;
         round.textContent = roundNumber;
+        tie.textContent = "Cpu wins";
+        humanImg.style.backgroundColor = "#FF6B6B";
+        humanImg.style.boxShadow = "0 4px 12px rgba(255, 107, 107, 0.4)";
+        cpuImg.style.backgroundColor = "#4ECDC4";
+        cpuImg.style.boxShadow = "0 4px 12px rgba(78, 205, 196, 0.4)"; 
     }
 
     newRound.style.visibility = "visible";
@@ -148,9 +166,10 @@ const playRound = function(humanChoice){
 
     if (humanScore > computerScore) {
         result.textContent = "You WIN !!!";
-
+        result.style.color = "#4ECDC4";
     } else{
         result.textContent = "You lose...";
+        result.style.color = "#FF6B6B";        
     }
 
     btnPaper.style.visibility = "hidden";
